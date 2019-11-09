@@ -18,3 +18,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+/**
+ * account
+ */
+Route::prefix('account')->group(function () {
+
+    //dashboard account
+    Route::get('/dashboard', 'account\DashboardController@index')->name('account.dashboard.index');
+
+});

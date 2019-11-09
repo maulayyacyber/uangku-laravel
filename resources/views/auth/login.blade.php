@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Masuk Akun &mdash; Wallet Diamond</title>
+    <title>Masuk Akun &mdash; UANGKU</title>
 
     <!-- General CSS Files -->
     <link rel="stylesheet" href="{{ asset('assets/modules/bootstrap/css/bootstrap.min.css') }}">
@@ -76,7 +76,7 @@
                         Belum punya akun? <a href="{{ route('register') }}">Buat Sekarang!</a>
                     </div>
                     <div class="simple-footer">
-                        © Wallet Diamond 2019. Hak Cipta Dilindungi
+                        © <strong>UANGKU</strong> 2019. Hak Cipta Dilindungi.
                     </div>
                 </div>
             </div>
