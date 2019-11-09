@@ -63,7 +63,7 @@
                 </div>
                 <ul class="sidebar-menu">
                     <li class="menu-header">MAIN MENU</li>
-                    <li><a class="nav-link" href="credits.html"><i class="fas fa-home"></i> <span>DASHBOARD</span></a></li>
+                    <li {{ setActive('account/dashboard') }}><a class="nav-link" href="credits.html"><i class="fas fa-home"></i> <span>DASHBOARD</span></a></li>
                     <li class="dropdown">
                         <a href="#" class="nav-link has-dropdown"><i class="fas fa-wallet"></i><span>CREDIT</span></a>
                         <ul class="dropdown-menu">
