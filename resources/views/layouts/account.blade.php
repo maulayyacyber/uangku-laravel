@@ -11,6 +11,7 @@
     <!-- General CSS Files -->
     <link rel="stylesheet" href="{{ asset('assets/modules/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/modules/fontawesome/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/modules/select2/dist/css/select2.min.css') }}">
 
     <!-- CSS Libraries -->
 
@@ -19,6 +20,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/components.css') }}">
     <script src="{{ asset('assets/modules/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/js/sweetalert.min.js') }}"></script>
+    <script src="{{ asset('assets/modules/cleave-js/dist/cleave.min.js') }}"></script>
     <style>
         .fas, .far, .fab, .fal {
             font-size: 20px;
@@ -73,11 +75,11 @@
                 <ul class="sidebar-menu">
                     <li class="menu-header">MAIN MENU</li>
                     <li class="{{ setActive('account/dashboard') }}"><a class="nav-link" href="{{ route('account.dashboard.index') }}"><i class="fas fa-home"></i> <span>DASHBOARD</span></a></li>
-                    <li class="dropdown {{ setActive('account/categories_debit') }}">
+                    <li class="dropdown {{ setActive('account/categories_debit'). setActive('account/debit') }}">
                         <a href="#" class="nav-link has-dropdown"><i class="fas fa-wallet"></i><span>DEBIT</span></a>
                         <ul class="dropdown-menu">
                             <li class="{{ setActive('account/categories_debit') }}"><a class="nav-link" href="{{ route('account.categories_debit.index') }}"><i class="fas fa-dice-d6"></i> KATEGORI</a></li>
-                            <li><a class="nav-link" href="index.html"><i class="fas fa-money-check-alt"></i> UANG MASUK</a></li>
+                            <li class="{{ setActive('account/debit') }}"><a class="nav-link" href="{{ route('account.debit.index') }}"><i class="fas fa-money-check-alt"></i> UANG MASUK</a></li>
                         </ul>
                     </li>
                     <li class="dropdown {{ setActive('account/categories_credit') }}">
@@ -128,6 +130,7 @@
 <script src="{{ asset('assets/modules/nicescroll/jquery.nicescroll.min.js') }}"></script>
 <script src="{{ asset('assets/modules/moment.min.js') }}"></script>
 <script src="{{ asset('assets/js/stisla.js') }}"></script>
+<script src="{{ asset('assets/modules/select2/dist/js/select2.full.min.js') }}"></script>
 
 <!-- JS Libraies -->
 
