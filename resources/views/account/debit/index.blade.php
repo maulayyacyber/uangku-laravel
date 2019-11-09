@@ -19,22 +19,22 @@
                     </div>
 
                     <div class="card-body">
-                        <div class="table-responsive">
-                            <form action="{{ route('account.debit.search') }}" method="GET">
-                                <div class="form-group">
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <a href="{{ route('account.debit.create') }}" class="btn btn-primary" style="padding-top: 10px;"><i class="fa fa-plus-circle"></i> TAMBAH</a>
-                                        </div>
-                                        <input type="text" class="form-control" name="q"
-                                               placeholder="cari berdasarkan keterangan">
-                                        <div class="input-group-append">
-                                            <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> CARI
-                                            </button>
-                                        </div>
+                        <form action="{{ route('account.debit.search') }}" method="GET">
+                            <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <a href="{{ route('account.debit.create') }}" class="btn btn-primary" style="padding-top: 10px;"><i class="fa fa-plus-circle"></i> TAMBAH</a>
+                                    </div>
+                                    <input type="text" class="form-control" name="q"
+                                           placeholder="cari berdasarkan keterangan">
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> CARI
+                                        </button>
                                     </div>
                                 </div>
-                            </form>
+                            </div>
+                        </form>
+                        <div class="table-responsive">
                             <table class="table table-bordered">
                                 <thead>
                                 <tr>
