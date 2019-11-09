@@ -27,4 +27,8 @@ Route::prefix('account')->group(function () {
     //dashboard account
     Route::get('/dashboard', 'account\DashboardController@index')->name('account.dashboard.index');
 
+    //categories credit
+    Route::get('/categories_credit/search', 'account\CategoriesCreditController@search')->name('account.categories_credit.search');
+    Route::Resource('/categories_credit', 'account\CategoriesCreditController',['as' => 'account']);
+
 });

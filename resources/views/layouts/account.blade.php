@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Blank Page &mdash; Stisla</title>
-
+    <title>@yield('title')</title>
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- General CSS Files -->
     <link rel="stylesheet" href="{{ asset('assets/modules/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/modules/fontawesome/css/all.min.css') }}">
@@ -14,9 +15,15 @@
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/components.css') }}">
+    <script src="{{ asset('assets/modules/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/js/sweetalert.min.js') }}"></script>
     <style>
         .fas, .far, .fab, .fal {
             font-size: 20px;
+        }
+
+        .form-group label {
+            font-weight: bold;
         }
     </style>
     </head>
@@ -63,26 +70,28 @@
                 </div>
                 <ul class="sidebar-menu">
                     <li class="menu-header">MAIN MENU</li>
-                    <li {{ setActive('account/dashboard') }}><a class="nav-link" href="credits.html"><i class="fas fa-home"></i> <span>DASHBOARD</span></a></li>
+                    <li class="{{ setActive('account/dashboard') }}"><a class="nav-link" href="{{ route('account.dashboard.index') }}"><i class="fas fa-home"></i> <span>DASHBOARD</span></a></li>
                     <li class="dropdown">
-                        <a href="#" class="nav-link has-dropdown"><i class="fas fa-wallet"></i><span>CREDIT</span></a>
+                        <a href="#" class="nav-link has-dropdown"><i class="fas fa-wallet"></i><span>DEBIT</span></a>
                         <ul class="dropdown-menu">
                             <li><a class="nav-link" href="index-0.html"><i class="fas fa-dice-d6"></i> KATEGORI</a></li>
                             <li><a class="nav-link" href="index.html"><i class="fas fa-money-check-alt"></i> UANG MASUK</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="nav-link has-dropdown"><i class="fas fa-wallet"></i><span>DEBIT</span></a>
+                    <li class="dropdown {{ setActive('account/categories_credit') }}">
+                        <a href="#" class="nav-link has-dropdown"><i class="fas fa-wallet"></i><span>CREDIT</span></a>
                         <ul class="dropdown-menu">
-                            <li><a class="nav-link" href="index-0.html"><i class="fas fa-dice-d6"></i> KATEGORI</a></li>
+                            <li class="{{ setActive('account/categories_credit') }}"><a class="nav-link" href="{{ route('account.categories_credit.index') }}"><i class="fas fa-dice-d6"></i> KATEGORI</a></li>
                             <li><a class="nav-link" href="index.html"><i class="fas fa-money-check-alt"></i> UANG KELUAR</a></li>
                         </ul>
                     </li>
+
                     <li class="dropdown">
                         <a href="#" class="nav-link has-dropdown"><i class="fas fa-chart-pie"></i><span>LAPORAN</span></a>
                         <ul class="dropdown-menu">
-                            <li><a class="nav-link" href="index-0.html"><i class="fas fa-chart-area"></i> CREDIT</a></li>
                             <li><a class="nav-link" href="index.html"><i class="fas fa-chart-line"></i> DEBIT</a></li>
+                            <li><a class="nav-link" href="index-0.html"><i class="fas fa-chart-area"></i> CREDIT</a></li>
+                            <li><a class="nav-link" href="index-0.html"><i class="fas fa-chart-pie"></i> SEMUA</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -99,7 +108,7 @@
 
 
 
-        <footer class="main-footer">
+        <footer class="main-footer" style="border-top: 3px solid #6777ef;">
             <div class="footer-left">
                 © <strong>UANGKU</strong> 2019. Hak Cipta Dilindungi.
             </div>
@@ -111,7 +120,6 @@
 </div>
 
 <!-- General JS Scripts -->
-<script src="{{ asset('assets/modules/jquery.min.js') }}"></script>
 <script src="{{ asset('assets/modules/popper.js') }}"></script>
 <script src="{{ asset('assets/modules/tooltip.js') }}"></script>
 <script src="{{ asset('assets/modules/bootstrap/js/bootstrap.min.js') }}"></script>

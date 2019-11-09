@@ -1,5 +1,9 @@
 @extends('layouts.account')
 
+@section('title')
+    Dashboard - UANGKU
+@stop
+
 @section('content')
     <div class="main-content">
         <section class="section">

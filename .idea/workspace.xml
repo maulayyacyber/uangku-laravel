@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7fa0e859-85ec-45f1-84ad-d2904bae59ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/helpers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/sweetalert.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/account/categories_credit/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/account/categories_credit/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/account/categories_credit/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/helpers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/account/dashboard/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/dashboard/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/account.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/account.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -151,7 +157,9 @@
       <option name="presentableId" value="Default" />
       <updated>1573200745160</updated>
       <workItem from="1573200746623" duration="476000" />
-      <workItem from="1573257712285" duration="9284000" />
+      <workItem from="1573257712285" duration="15559000" />
+      <workItem from="1573276512970" duration="3000" />
+      <workItem from="1573276535957" duration="592000" />
     </task>
     <servers />
   </component>
@@ -163,7 +171,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
