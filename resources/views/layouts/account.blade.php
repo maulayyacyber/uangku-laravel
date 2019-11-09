@@ -6,6 +6,8 @@
     <title>@yield('title')</title>
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="{{ asset('assets/img/logo.png') }}">
     <!-- General CSS Files -->
     <link rel="stylesheet" href="{{ asset('assets/modules/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/modules/fontawesome/css/all.min.css') }}">
@@ -71,10 +73,10 @@
                 <ul class="sidebar-menu">
                     <li class="menu-header">MAIN MENU</li>
                     <li class="{{ setActive('account/dashboard') }}"><a class="nav-link" href="{{ route('account.dashboard.index') }}"><i class="fas fa-home"></i> <span>DASHBOARD</span></a></li>
-                    <li class="dropdown">
+                    <li class="dropdown {{ setActive('account/categories_debit') }}">
                         <a href="#" class="nav-link has-dropdown"><i class="fas fa-wallet"></i><span>DEBIT</span></a>
                         <ul class="dropdown-menu">
-                            <li><a class="nav-link" href="index-0.html"><i class="fas fa-dice-d6"></i> KATEGORI</a></li>
+                            <li class="{{ setActive('account/categories_debit') }}"><a class="nav-link" href="{{ route('account.categories_debit.index') }}"><i class="fas fa-dice-d6"></i> KATEGORI</a></li>
                             <li><a class="nav-link" href="index.html"><i class="fas fa-money-check-alt"></i> UANG MASUK</a></li>
                         </ul>
                     </li>

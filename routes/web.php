@@ -27,6 +27,9 @@ Route::prefix('account')->group(function () {
     //dashboard account
     Route::get('/dashboard', 'account\DashboardController@index')->name('account.dashboard.index');
 
+    //categories debit
+    Route::get('/categories_debit/search', 'account\CategoriesDebitController@search')->name('account.categories_debit.search');
+    Route::Resource('/categories_debit', 'account\CategoriesDebitController',['as' => 'account']);
     //categories credit
     Route::get('/categories_credit/search', 'account\CategoriesCreditController@search')->name('account.categories_credit.search');
     Route::Resource('/categories_credit', 'account\CategoriesCreditController',['as' => 'account']);
