@@ -53,7 +53,7 @@
                                     <tr>
                                         <th scope="row" style="text-align: center">{{ $no }}</th>
                                         <td>{{ $hasil->name }}</td>
-                                        <td>{{ $hasil->nominal }}</td>
+                                        <td>{{ rupiah($hasil->nominal) }}</td>
                                         <td>{{ $hasil->description }}</td>
                                         <td>
                                             <a href="{{ route('account.debit.edit', $hasil->id) }}" class="btn btn-sm btn-primary">
