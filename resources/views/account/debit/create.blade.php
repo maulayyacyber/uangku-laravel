@@ -1,21 +1,21 @@
 @extends('layouts.account')
 
 @section('title')
-    Tambah Debit - UANGKU
+    Tambah Uang Masuk - UANGKU
 @stop
 
 @section('content')
     <div class="main-content">
         <section class="section">
             <div class="section-header">
-                <h1> DEBIT</h1>
+                <h1> UANG MASUK</h1>
             </div>
 
             <div class="section-body">
 
                 <div class="card">
                     <div class="card-header">
-                        <h4><i class="fas fa-money-check-alt"></i> TAMBAH DEBIT</h4>
+                        <h4><i class="fas fa-money-check-alt"></i> TAMBAH UANG MASUK</h4>
                     </div>
 
                     <div class="card-body">

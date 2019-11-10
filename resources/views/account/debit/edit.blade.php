@@ -1,21 +1,21 @@
 @extends('layouts.account')
 
 @section('title')
-    Edit Debit - UANGKU
+    Edit Uang Masuk - UANGKU
 @stop
 
 @section('content')
     <div class="main-content">
         <section class="section">
             <div class="section-header">
-                <h1> DEBIT</h1>
+                <h1> UANG MASUK</h1>
             </div>
 
             <div class="section-body">
 
                 <div class="card">
                     <div class="card-header">
-                        <h4><i class="fas fa-money-check-alt"></i> EDIT DEBIT</h4>
+                        <h4><i class="fas fa-money-check-alt"></i> EDIT UANG MASUK</h4>
                     </div>
 
                     <div class="card-body">
@@ -36,6 +36,21 @@
                                         @enderror
                                     </div>
                                 </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>TANGGAL</label>
+                                        <input type="text" class="form-control datetimepicker" name="debit_date" value="{{ old('debit_date', $debit->debit_date) }}" placeholder="Pilih Tanggal">
+
+                                        @error('date_debit')
+                                        <div class="invalid-feedback" style="display: block">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>KATEGORI</label>
@@ -85,6 +100,15 @@
         </section>
     </div>
     <script>
+
+        if($(".datetimepicker").length) {
+            $('.datetimepicker').daterangepicker({
+                locale: {format: 'YYYY-MM-DD hh:mm'},
+                singleDatePicker: true,
+                timePicker: true,
+                timePicker24Hour: true,
+            });
+        }
 
         var cleaveC = new Cleave('.currency', {
             numeral: true,
