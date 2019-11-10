@@ -1,6 +1,6 @@
 <p align="center"><img src="https://i.imgur.com/2v6AyjS.png" width="200"></p>
 
-## UANGKU - TRACK HISTORY MONEY
+## UANGKU - EASY TRACKING YOUR MONEY
 
 UANGKU adalah aplikasi opens source yang dikembangkan untuk mencatat problem keuangan, seperti keuangan masuk / debit dan keuangan keluar / credit. Beberapa fitur diantaranya:
 
