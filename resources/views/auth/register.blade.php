@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/components.css') }}">
 </head>
 
-<body>
+<body style="background: #f3f3f3">
 <div id="app">
     <section class="section">
         <div class="container mt-5">
