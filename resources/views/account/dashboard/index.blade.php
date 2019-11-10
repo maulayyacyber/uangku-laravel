@@ -5,6 +5,11 @@
 @stop
 
 @section('content')
+
+    <script>
+
+    </script>
+
     <div class="main-content">
         <section class="section">
             <div class="row">
@@ -50,6 +55,20 @@
                             <div class="card-body" style="font-size: 20px">
                                 {{ rupiah($saldo_bulan_lalu) }}
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4><i class="fas fa-chart-pie"></i> STATISTIK KEUANGAN DALAM 1 TAHUN</h4>
+                        </div>
+
+                        <div class="card-body">
+                            <div id="container"></div>
                         </div>
                     </div>
                 </div>

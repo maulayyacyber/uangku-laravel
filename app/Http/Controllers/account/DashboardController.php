@@ -73,6 +73,11 @@ class DashboardController extends Controller
         //saldo selama ini
         $saldo_selama_ini = $uang_masuk_selama_ini->nominal - $uang_keluar_selama_ini->nominal;
 
+
+        /**
+         * chart
+         */
+
         return view('account.dashboard.index', compact('saldo_selama_ini','saldo_bulan_ini', 'saldo_bulan_lalu'));
     }
 

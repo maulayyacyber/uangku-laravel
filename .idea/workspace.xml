@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7fa0e859-85ec-45f1-84ad-d2904bae59ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/account/laporan_credit/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/highcharts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/account/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/account/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/account/dashboard/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/dashboard/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/account.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/account.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -156,7 +158,7 @@
       <workItem from="1573276512970" duration="3000" />
       <workItem from="1573276535957" duration="1150000" />
       <workItem from="1573300191464" duration="6136000" />
-      <workItem from="1573342720056" duration="10522000" />
+      <workItem from="1573342720056" duration="15093000" />
     </task>
     <servers />
   </component>

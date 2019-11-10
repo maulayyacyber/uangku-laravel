@@ -26,6 +26,7 @@
     <script src="{{ asset('assets/modules/cleave-js/dist/cleave.min.js') }}"></script>
     <script src="{{ asset('assets/modules/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
     <script src="{{ asset('assets/modules/bootstrap-timepicker/js/bootstrap-timepicker.min.js') }}"></script>
+    <script src="{{ asset('assets/js/highcharts.js') }}"></script>
     <style>
         .fas, .far, .fab, .fal {
             font-size: 20px;
