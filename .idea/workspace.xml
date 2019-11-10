@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7fa0e859-85ec-45f1-84ad-d2904bae59ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/account/laporan_debit/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/account/laporan_credit/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/account/DebitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/account/DebitController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/account/categories_credit/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/categories_credit/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/account/categories_credit/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/categories_credit/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/account/categories_credit/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/categories_credit/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/account/categories_debit/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/categories_debit/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/account/categories_debit/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/categories_debit/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/account/categories_debit/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/categories_debit/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/account.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/account.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -163,7 +156,7 @@
       <workItem from="1573276512970" duration="3000" />
       <workItem from="1573276535957" duration="1150000" />
       <workItem from="1573300191464" duration="6136000" />
-      <workItem from="1573342720056" duration="9881000" />
+      <workItem from="1573342720056" duration="10522000" />
     </task>
     <servers />
   </component>
