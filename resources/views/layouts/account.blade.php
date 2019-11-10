@@ -37,7 +37,7 @@
     </style>
     </head>
 
-<body>
+<body style="background-color: #f3f3f3;">
 <div id="app">
     <div class="main-wrapper main-wrapper-1">
         <div class="navbar-bg"></div>
@@ -81,25 +81,25 @@
                     <li class="menu-header">MAIN MENU</li>
                     <li class="{{ setActive('account/dashboard') }}"><a class="nav-link" href="{{ route('account.dashboard.index') }}"><i class="fas fa-home"></i> <span>DASHBOARD</span></a></li>
                     <li class="dropdown {{ setActive('account/categories_debit'). setActive('account/debit') }}">
-                        <a href="#" class="nav-link has-dropdown"><i class="fas fa-wallet"></i><span>DEBIT</span></a>
+                        <a href="#" class="nav-link has-dropdown"><i class="fas fa-wallet"></i><span>UANG MASUK</span></a>
                         <ul class="dropdown-menu">
                             <li class="{{ setActive('account/categories_debit') }}"><a class="nav-link" href="{{ route('account.categories_debit.index') }}"><i class="fas fa-dice-d6"></i> KATEGORI</a></li>
                             <li class="{{ setActive('account/debit') }}"><a class="nav-link" href="{{ route('account.debit.index') }}"><i class="fas fa-money-check-alt"></i> UANG MASUK</a></li>
                         </ul>
                     </li>
                     <li class="dropdown {{ setActive('account/categories_credit'). setActive('account/credit') }}">
-                        <a href="#" class="nav-link has-dropdown"><i class="fas fa-wallet"></i><span>CREDIT</span></a>
+                        <a href="#" class="nav-link has-dropdown"><i class="fas fa-wallet"></i><span>UANG KELUAR</span></a>
                         <ul class="dropdown-menu">
                             <li class="{{ setActive('account/categories_credit') }}"><a class="nav-link" href="{{ route('account.categories_credit.index') }}"><i class="fas fa-dice-d6"></i> KATEGORI</a></li>
                             <li class="{{ setActive('account/credit') }}"><a class="nav-link" href="{{ route('account.credit.index') }}"><i class="fas fa-money-check-alt"></i> UANG KELUAR</a></li>
                         </ul>
                     </li>
 
-                    <li class="dropdown">
+                    <li class="dropdown {{ setActive('account/laporan_debit') }}">
                         <a href="#" class="nav-link has-dropdown"><i class="fas fa-chart-pie"></i><span>LAPORAN</span></a>
                         <ul class="dropdown-menu">
-                            <li><a class="nav-link" href="index.html"><i class="fas fa-chart-line"></i> DEBIT</a></li>
-                            <li><a class="nav-link" href="index-0.html"><i class="fas fa-chart-area"></i> CREDIT</a></li>
+                            <li class="{{ setActive('account/laporan_debit') }}"><a class="nav-link" href="{{ route('account.laporan_debit.index') }}"><i class="fas fa-chart-line"></i> UANG MASUK</a></li>
+                            <li><a class="nav-link" href="index-0.html"><i class="fas fa-chart-area"></i> UANG KELUAR</a></li>
                             <li><a class="nav-link" href="index-0.html"><i class="fas fa-chart-pie"></i> SEMUA</a></li>
                         </ul>
                     </li>
@@ -117,7 +117,7 @@
 
 
 
-        <footer class="main-footer" style="border-top: 3px solid #6777ef;">
+        <footer class="main-footer" style="border-top: 3px solid #6777ef;background-color: #ffffff;margin-bottom: -20px">
             <div class="footer-left">
                 © <strong>UANGKU</strong> 2019. Hak Cipta Dilindungi.
             </div>

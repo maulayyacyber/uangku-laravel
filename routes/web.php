@@ -39,5 +39,8 @@ Route::prefix('account')->group(function () {
     //credit
     Route::get('/credit/search', 'account\CreditController@search')->name('account.credit.search');
     Route::Resource('/credit', 'account\CreditController',['as' => 'account']);
+    //laporan debit
+    Route::get('/laporan_debit', 'account\LaporanDebitController@index')->name('account.laporan_debit.index');
+    Route::get('/laporan_debit/check', 'account\LaporanDebitController@check')->name('account.laporan_debit.check');
 
 });
