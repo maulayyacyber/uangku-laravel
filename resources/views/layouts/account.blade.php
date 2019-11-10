@@ -87,11 +87,11 @@
                             <li class="{{ setActive('account/debit') }}"><a class="nav-link" href="{{ route('account.debit.index') }}"><i class="fas fa-money-check-alt"></i> UANG MASUK</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown {{ setActive('account/categories_credit') }}">
+                    <li class="dropdown {{ setActive('account/categories_credit'). setActive('account/credit') }}">
                         <a href="#" class="nav-link has-dropdown"><i class="fas fa-wallet"></i><span>CREDIT</span></a>
                         <ul class="dropdown-menu">
                             <li class="{{ setActive('account/categories_credit') }}"><a class="nav-link" href="{{ route('account.categories_credit.index') }}"><i class="fas fa-dice-d6"></i> KATEGORI</a></li>
-                            <li><a class="nav-link" href="index.html"><i class="fas fa-money-check-alt"></i> UANG KELUAR</a></li>
+                            <li class="{{ setActive('account/credit') }}"><a class="nav-link" href="{{ route('account.credit.index') }}"><i class="fas fa-money-check-alt"></i> UANG KELUAR</a></li>
                         </ul>
                     </li>
 

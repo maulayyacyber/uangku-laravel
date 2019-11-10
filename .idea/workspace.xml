@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7fa0e859-85ec-45f1-84ad-d2904bae59ba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/account/credit/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/account/credit/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/account/credit/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Debit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Debit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/account/DebitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/account/DebitController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_08_081805_create_credit_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_08_081805_create_credit_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_08_081836_create_debit_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_08_081836_create_debit_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/account/categories_credit/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/categories_credit/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/account/categories_debit/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/categories_debit/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/account/debit/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/debit/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/account/debit/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/debit/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/account.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/account.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -162,7 +158,7 @@
       <workItem from="1573276512970" duration="3000" />
       <workItem from="1573276535957" duration="1150000" />
       <workItem from="1573300191464" duration="6136000" />
-      <workItem from="1573342720056" duration="1743000" />
+      <workItem from="1573342720056" duration="2787000" />
     </task>
     <servers />
   </component>

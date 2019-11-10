@@ -36,5 +36,8 @@ Route::prefix('account')->group(function () {
     //categories credit
     Route::get('/categories_credit/search', 'account\CategoriesCreditController@search')->name('account.categories_credit.search');
     Route::Resource('/categories_credit', 'account\CategoriesCreditController',['as' => 'account']);
+    //credit
+    Route::get('/credit/search', 'account\CreditController@search')->name('account.credit.search');
+    Route::Resource('/credit', 'account\CreditController',['as' => 'account']);
 
 });
