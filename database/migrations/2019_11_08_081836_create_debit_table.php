@@ -19,6 +19,7 @@ class CreateDebitTable extends Migration
             $table->unsignedBigInteger('category_id');
             $table->bigInteger('nominal');
             $table->text('description');
+            $table->dateTime('debit_date');
             $table->timestamps();
 
             $table->foreign('user_id')

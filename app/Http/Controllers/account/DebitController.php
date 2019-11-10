@@ -26,7 +26,7 @@ class DebitController extends Controller
     public function index()
     {
         $debit = DB::table('debit')
-            ->select('debit.id', 'debit.category_id', 'debit.user_id', 'debit.nominal', 'debit.description', 'categories_debit.id as id_category', 'categories_debit.name')
+            ->select('debit.id', 'debit.category_id', 'debit.user_id', 'debit.nominal', 'debit.debit_date', 'debit.description', 'categories_debit.id as id_category', 'categories_debit.name')
             ->join('categories_debit', 'debit.category_id', '=', 'categories_debit.id', 'LEFT')
             ->where('debit.user_id', Auth::user()->id)
             ->orderBy('debit.created_at', 'DESC')
@@ -42,7 +42,7 @@ class DebitController extends Controller
     {
         $search = $request->get('q');
         $debit = DB::table('debit')
-            ->select('debit.id', 'debit.category_id', 'debit.user_id', 'debit.nominal', 'debit.description', 'categories_debit.id as id_category', 'categories_debit.name')
+            ->select('debit.id', 'debit.category_id', 'debit.user_id', 'debit.nominal', 'debit.debit_date', 'debit.description', 'categories_debit.id as id_category', 'categories_debit.name')
             ->join('categories_debit', 'debit.category_id', '=', 'categories_debit.id', 'LEFT')
             ->where('debit.user_id', Auth::user()->id)
             ->where('debit.description', 'LIKE', '%' .$search. '%')
@@ -74,12 +74,14 @@ class DebitController extends Controller
         //set validasi required
         $this->validate($request, [
             'nominal'       => 'required',
+            'debit_date'    => 'required',
             'category_id'   => 'required',
             'description'   => 'required'
         ],
             //set message validation
             [
                 'nominal.required' => 'Masukkan Nominal Debit / Uang Masuk!',
+                'debit_date.required' => 'Silahkan Pilih Tanggal!',
                 'category_id.required' => 'Silahkan Pilih Kategori!',
                 'description.required' => 'Masukkan Keterangan!',
             ]
@@ -88,6 +90,7 @@ class DebitController extends Controller
         //Eloquent simpan data
         $save = Debit::create([
             'user_id'       => Auth::user()->id,
+            'debit_date'   => $request->input('debit_date'),
             'category_id'   => $request->input('category_id'),
             'nominal'       => str_replace(",", "", $request->input('nominal')),
             'description'   => $request->input('description'),
@@ -127,12 +130,14 @@ class DebitController extends Controller
         //set validasi required
         $this->validate($request, [
             'nominal'       => 'required',
+            'debit_date'    => 'required',
             'category_id'   => 'required',
             'description'   => 'required'
         ],
             //set message validation
             [
                 'nominal.required' => 'Masukkan Nominal Debit / Uang Masuk!',
+                'debit_date.required' => 'Silahkan Pilih Tanggal!',
                 'category_id.required' => 'Silahkan Pilih Kategori!',
                 'description.required' => 'Masukkan Keterangan!',
             ]
@@ -142,6 +147,7 @@ class DebitController extends Controller
         $update = Debit::whereId($debit->id)->update([
             'user_id'       => Auth::user()->id,
             'category_id'   => $request->input('category_id'),
+            'debit_date'    => $request->input('debit_date'),
             'nominal'       => str_replace(",", "", $request->input('nominal')),
             'description'   => $request->input('description'),
         ]);

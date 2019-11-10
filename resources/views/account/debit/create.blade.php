@@ -38,8 +38,23 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
+                                        <label>TANGGAL</label>
+                                        <input type="text" class="form-control datetimepicker" name="debit_date" placeholder="Pilih Tanggal">
+
+                                        @error('date_debit')
+                                        <div class="invalid-feedback" style="display: block">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
                                         <label>KATEGORI</label>
-                                        <select class="form-control select2" name="category_id">
+                                        <select class="form-control select2" name="category_id" style="width: 100%">
                                             <option value="">-- PILIH KATEGORI --</option>
                                             @foreach ($categories as $hasil)
                                                 <option value="{{ $hasil->id }}"> {{ $hasil->name }}</option>
@@ -81,6 +96,15 @@
         </section>
     </div>
     <script>
+
+        if($(".datetimepicker").length) {
+            $('.datetimepicker').daterangepicker({
+                locale: {format: 'YYYY-MM-DD hh:mm'},
+                singleDatePicker: true,
+                timePicker: true,
+                timePicker24Hour: true,
+            });
+        }
 
         var cleaveC = new Cleave('.currency', {
             numeral: true,

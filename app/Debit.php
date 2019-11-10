@@ -15,6 +15,6 @@ class Debit extends Model
      * @var array
      */
     protected $fillable = [
-        'user_id', 'category_id', 'nominal', 'description'
+        'user_id', 'category_id', 'nominal', 'description', 'debit_date'
     ];
 }

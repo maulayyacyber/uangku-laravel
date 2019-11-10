@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="{{ asset('assets/modules/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/modules/fontawesome/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/modules/select2/dist/css/select2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/modules/bootstrap-daterangepicker/daterangepicker.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/modules/bootstrap-timepicker/css/bootstrap-timepicker.min.css') }}">
 
     <!-- CSS Libraries -->
 
@@ -20,7 +22,10 @@
     <link rel="stylesheet" href="{{ asset('assets/css/components.css') }}">
     <script src="{{ asset('assets/modules/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/js/sweetalert.min.js') }}"></script>
+    <script src="{{ asset('assets/modules/moment.min.js') }}"></script>
     <script src="{{ asset('assets/modules/cleave-js/dist/cleave.min.js') }}"></script>
+    <script src="{{ asset('assets/modules/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
+    <script src="{{ asset('assets/modules/bootstrap-timepicker/js/bootstrap-timepicker.min.js') }}"></script>
     <style>
         .fas, .far, .fab, .fal {
             font-size: 20px;
@@ -128,7 +133,6 @@
 <script src="{{ asset('assets/modules/tooltip.js') }}"></script>
 <script src="{{ asset('assets/modules/bootstrap/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('assets/modules/nicescroll/jquery.nicescroll.min.js') }}"></script>
-<script src="{{ asset('assets/modules/moment.min.js') }}"></script>
 <script src="{{ asset('assets/js/stisla.js') }}"></script>
 <script src="{{ asset('assets/modules/select2/dist/js/select2.full.min.js') }}"></script>
 

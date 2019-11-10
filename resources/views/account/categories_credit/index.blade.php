@@ -40,7 +40,7 @@
                                 <tr>
                                     <th scope="col" style="text-align: center;width: 6%">NO.</th>
                                     <th scope="col">NAMA KATEGORI</th>
-                                    <th scope="col" style="width: 22%;text-align: center">AKSI</th>
+                                    <th scope="col" style="width: 15%;text-align: center">AKSI</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -51,12 +51,12 @@
                                     <tr>
                                         <th scope="row" style="text-align: center">{{ $no }}</th>
                                         <td>{{ $hasil->name }}</td>
-                                        <td>
+                                        <td class="text-center">
                                             <a href="{{ route('account.categories_credit.edit', $hasil->id) }}" class="btn btn-sm btn-primary">
-                                                <i class="fa fa-edit"></i> EDIT
+                                                <i class="fa fa-pencil-alt"></i>
                                             </a>
                                             <button onClick="Delete(this.id)" class="btn btn-sm btn-danger" id="{{ $hasil->id }}">
-                                                <i class="fa fa-trash"></i> HAPUS
+                                                <i class="fa fa-trash"></i>
                                             </button>
                                         </td>
                                     </tr>

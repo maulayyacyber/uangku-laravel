@@ -42,7 +42,8 @@
                                     <th scope="col">KATEGORI</th>
                                     <th scope="col">NOMINAL</th>
                                     <th scope="col">KETERANGAN</th>
-                                    <th scope="col" style="width: 22%;text-align: center">AKSI</th>
+                                    <th scope="col">TANGGAL</th>
+                                    <th scope="col" style="width: 15%;text-align: center">AKSI</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -55,12 +56,13 @@
                                         <td>{{ $hasil->name }}</td>
                                         <td>{{ rupiah($hasil->nominal) }}</td>
                                         <td>{{ $hasil->description }}</td>
-                                        <td>
+                                        <td>{{ $hasil->debit_date }}</td>
+                                        <td class="text-center">
                                             <a href="{{ route('account.debit.edit', $hasil->id) }}" class="btn btn-sm btn-primary">
-                                                <i class="fa fa-edit"></i> EDIT
+                                                <i class="fa fa-pencil-alt"></i>
                                             </a>
                                             <button onClick="Delete(this.id)" class="btn btn-sm btn-danger" id="{{ $hasil->id }}">
-                                                <i class="fa fa-trash"></i> HAPUS
+                                                <i class="fa fa-trash"></i>
                                             </button>
                                         </td>
                                     </tr>
