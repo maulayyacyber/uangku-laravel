@@ -21,3 +21,15 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
  * Api Auth
  */
 Route::post('/v1/login', 'api\v1\Auth\LoginController@login')->name('api.login');
+
+/**
+ * Account
+ */
+Route::prefix('/v1/account')->group(function () {
+
+    Route::group(['middleware' => ['auth:api']], function () {
+        //profil
+        Route::get('/saldo', 'api\v1\account\SaldoController@index')->name('account.api.saldo');
+    });
+
+});
