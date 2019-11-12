@@ -28,8 +28,10 @@ Route::post('/v1/login', 'api\v1\Auth\LoginController@login')->name('api.login')
 Route::prefix('/v1/account')->group(function () {
 
     Route::group(['middleware' => ['auth:api']], function () {
-        //profil
+        //saldo
         Route::get('/saldo', 'api\v1\account\SaldoController@index')->name('account.api.saldo');
+        //categories debit
+        Route::get('/categories_debit', 'api\v1\account\CategoriesDebitController@index')->name('account.api.categories_debit.index');
     });
 
 });
