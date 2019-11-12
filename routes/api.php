@@ -36,6 +36,8 @@ Route::prefix('/v1/account')->group(function () {
         Route::get('/categories_credit', 'api\v1\account\CategoriesCreditController@index')->name('account.api.categories_credit.index');
         //debit
         Route::get('/debit', 'api\v1\account\DebitController@index')->name('account.api.debit.index');
+        //credit
+        Route::get('/credit', 'api\v1\account\CreditController@index')->name('account.api.credit.index');
     });
 
 });
