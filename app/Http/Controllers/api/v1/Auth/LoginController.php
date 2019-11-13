@@ -13,7 +13,7 @@ class LoginController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
      */
-    public function login(Request $request){
+    public function index(Request $request){
 
         //validate data from form
         $validator = Validator::make($request->all(), [

@@ -31,24 +31,37 @@
                         <div class="card-header"><h4>DAFTAR AKUN</h4></div>
 
                         <div class="card-body">
-                            <form method="POST">
+                            <form action="{{ route('register') }}" method="POST">
+                                @csrf
                                 <div class="row">
                                     <div class="form-group col-6">
                                         <label for="frist_name">Nama Lengkap</label>
-                                        <input id="frist_name" type="text" class="form-control" name="frist_name" autofocus>
+                                        <input id="frist_name" type="text" class="form-control" name="full_name" value="{{ old('full_name') }}" autofocus>
+                                        @error('full_name')
+                                        <div class="invalid-feedback" style="display: block">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
                                     </div>
                                     <div class="form-group col-6">
                                         <label for="last_name">Username</label>
-                                        <input id="last_name" type="text" class="form-control" name="last_name">
+                                        <input id="last_name" type="text" class="form-control" name="username" value="{{ old('username') }}">
+                                        @error('username')
+                                        <div class="invalid-feedback" style="display: block">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="email">Alamat Email</label>
-                                    <input id="email" type="email" class="form-control" name="email">
-                                    <div class="invalid-feedback">
+                                    <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}">
+                                    @error('email')
+                                    <div class="invalid-feedback" style="display: block">
+                                        {{ $message }}
                                     </div>
-                                </div>
+                                    @enderror
 
                                 <div class="row">
                                     <div class="form-group col-6">
@@ -58,17 +71,27 @@
                                             <div class="bar"></div>
                                             <div class="label"></div>
                                         </div>
+                                        @error('password')
+                                        <div class="invalid-feedback" style="display: block">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
                                     </div>
                                     <div class="form-group col-6">
                                         <label for="password2" class="d-block">Konfirmasi Password</label>
-                                        <input id="password2" type="password" class="form-control" name="password-confirm">
+                                        <input id="password2" type="password" class="form-control" name="password_confirmation">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" name="agree" class="custom-control-input" id="agree">
+                                        <input type="checkbox" name="agree" class="custom-control-input" id="agree" @if(old('agree')) checked @endif>
                                         <label class="custom-control-label" for="agree">Saya setuju dengan syarat dan ketentuan</label>
+                                        @error('agree')
+                                        <div class="invalid-feedback" style="display: block">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
                                     </div>
                                 </div>
 

@@ -28,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/account/dashboard/';
 
     /**
      * Create a new controller instance.
@@ -49,10 +49,22 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
+            'full_name'     => ['required'],
+            'username'      => ['required', 'unique:users'],
+            'email'         => ['required', 'email','unique:users'],
+            'password'      => ['required', 'confirmed'],
+            'agree'         => ['required'],
+        ],
+            [
+                'full_name.required'    => 'Masukkan Nama Lengkap Anda !',
+                'username.required'     => 'Masukkan Username Anda !',
+                'email.required'        => 'Masukkan Alamat Email Anda !',
+                'email.unique'          => 'Alamat Email Sudah Terdaftar !',
+                'password.required'     => 'Masukkan Password Anda !',
+                'password.confirmed'    => 'Konfirmasi Password Salah !',
+                'agree.required'        => 'Silahkan Centang Kebijakan dan Ketentuan !',
+            ]
+        );
     }
 
     /**
@@ -64,9 +76,12 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'full_name'     => $data['full_name'],
+            'username'      => $data['username'],
+            'email'         => $data['email'],
+            'password'      => Hash::make($data['password']),
         ]);
     }
+
+
 }

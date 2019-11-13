@@ -20,7 +20,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 /**
  * Api Auth
  */
-Route::post('/v1/login', 'api\v1\Auth\LoginController@login')->name('api.login');
+Route::post('/v1/login', 'api\v1\Auth\LoginController@index')->name('api.login');
+Route::post('/v1/register', 'api\v1\Auth\RegisterController@index')->name('api.login');
 
 /**
  * Account
