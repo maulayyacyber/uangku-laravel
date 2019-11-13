@@ -58,6 +58,7 @@ class RegisterController extends Controller
             [
                 'full_name.required'    => 'Masukkan Nama Lengkap Anda !',
                 'username.required'     => 'Masukkan Username Anda !',
+                'username.unique'       => 'Username Sudah Terdaftar !',
                 'email.required'        => 'Masukkan Alamat Email Anda !',
                 'email.unique'          => 'Alamat Email Sudah Terdaftar !',
                 'password.required'     => 'Masukkan Password Anda !',

@@ -63,7 +63,7 @@
                                     </div>
                                     @enderror
 
-                                <div class="row">
+                                <div class="row" style="margin-top: 30px">
                                     <div class="form-group col-6">
                                         <label for="password" class="d-block">Password</label>
                                         <input id="password" type="password" class="form-control pwstrength" data-indicator="pwindicator" name="password">
