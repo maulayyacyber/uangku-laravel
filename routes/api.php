@@ -42,6 +42,7 @@ Route::prefix('/v1/account')->group(function () {
         Route::post('/debit/store', 'api\v1\account\DebitController@store')->name('account.api.debit.store');
         //credit
         Route::get('/credit', 'api\v1\account\CreditController@index')->name('account.api.credit.index');
+        Route::post('/credit/store', 'api\v1\account\CreditController@store')->name('account.api.credit.store');
     });
 
 });
