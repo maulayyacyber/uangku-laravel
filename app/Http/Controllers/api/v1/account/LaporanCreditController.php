@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers\api\v1\account;
 
-use App\Debit;
+use App\Credit;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
-class LaporanDebitController extends Controller
+class LaporanCreditController extends Controller
 {
     /**
-     * LaporanDebitController constructor.
+     * LaporanCreditController constructor.
      */
     public function __construct()
     {
@@ -46,18 +46,17 @@ class LaporanDebitController extends Controller
             $tanggal_awal  = $request->input('tanggal_awal');
             $tanggal_akhir = $request->input('tanggal_akhir');
 
-            $debit = Debit::select('debit.id', 'debit.category_id', 'debit.user_id', 'debit.nominal', 'debit.debit_date', 'debit.description', 'categories_debit.id as id_category', 'categories_debit.name')
-                ->join('categories_debit', 'debit.category_id', '=', 'categories_debit.id', 'LEFT')
-                ->whereDate('debit.debit_date', '>=', $tanggal_awal)
-                ->whereDate('debit.debit_date', '<=', $tanggal_akhir)
+            $credit = Credit::select('credit.id', 'credit.category_id', 'credit.user_id', 'credit.nominal', 'credit.credit_date', 'credit.description', 'categories_credit.id as id_category', 'categories_credit.name')
+                ->join('categories_credit', 'credit.category_id', '=', 'categories_credit.id', 'LEFT')
+                ->whereDate('credit.credit_date', '>=', $tanggal_awal)
+                ->whereDate('credit.credit_date', '<=', $tanggal_akhir)
                 ->get();
 
             return response()->json([
                 'success' => true,
-                'data'    => $debit
+                'data'    => $credit
             ],401);
 
         }
     }
-
 }

@@ -45,6 +45,8 @@ Route::prefix('/v1/account')->group(function () {
         Route::post('/credit/store', 'api\v1\account\CreditController@store')->name('account.api.credit.store');
         //laporan debit
         Route::get('/laporan_debit', 'api\v1\account\LaporanDebitController@index')->name('account.api.laporan_debit.index');
+        //laporan credit
+        Route::get('/laporan_credit', 'api\v1\account\LaporanCreditController@index')->name('account.api.laporan_credit.index');
     });
 
 });
